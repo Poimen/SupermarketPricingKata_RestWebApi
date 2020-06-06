@@ -7,11 +7,15 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/SupermarketPricingKata_RestWebApi.csproj",
+                "${workspaceFolder}/SupermarketApi/SupermarketApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
         },
         {
             "label": "publish",
@@ -19,7 +23,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/SupermarketPricingKata_RestWebApi.csproj",
+                "${workspaceFolder}/SupermarketApi/SupermarketApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -31,8 +35,9 @@
             "type": "process",
             "args": [
                 "watch",
-                "run",
-                "${workspaceFolder}/SupermarketPricingKata_RestWebApi.csproj",
+                "--project",
+                "${workspaceFolder}/SupermarketApi.Tests/SupermarketApi.Tests.csproj",
+                "test",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
