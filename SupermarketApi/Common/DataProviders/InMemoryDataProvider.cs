@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SupermarketApi.Common.DataProviders
 {
@@ -10,9 +11,9 @@ namespace SupermarketApi.Common.DataProviders
 
         }
 
-        public IEnumerable<T> Select<T>(object query, object parameters = null)
+        public Task<IEnumerable<T>> Select<T>(object query, object? parameters = null)
         {
-            return Enumerable.Empty<T>();
+            return Task.FromResult(Enumerable.Empty<T>());
         }
     }
 }

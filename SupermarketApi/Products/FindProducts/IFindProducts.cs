@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using SupermarketApi.Products.Models;
 
 namespace SupermarketApi.Products.FindProducts
 {
     public interface IFindProducts
     {
-        IEnumerable<Product> All();
+        Task<IEnumerable<Product>> All();
     }
 }

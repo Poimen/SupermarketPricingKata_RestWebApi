@@ -25,7 +25,7 @@ namespace SupermarketApi.Products
         [HttpGet]
         public async Task<IEnumerable<ProductViewModel>> Get()
         {
-            var allProducts = _findProducts.All();
+            var allProducts = await _findProducts.All();
             return this._mapper.Map<IEnumerable<ProductViewModel>>(allProducts);
         }
     }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using SupermarketApi.Common.DataProviders;
 using SupermarketApi.Products.Models;
 
@@ -15,9 +16,9 @@ namespace SupermarketApi.Products.FindProducts
             _dbProvider = dbProvider ?? throw new ArgumentNullException(nameof(dbProvider));
         }
 
-        public IEnumerable<Product> All()
+        public Task<IEnumerable<Product>> All()
         {
-            return _dbProvider.Select<Product>(null);
+            return _dbProvider.Select<Product>("");
         }
     }
 }
