@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SupermarketApi.Products.Models;
@@ -12,9 +14,10 @@ namespace SupermarketApi.Products
         {
         }
 
-        public async Task<Product> Index()
+        [HttpGet]
+        public async Task<IEnumerable<Product>> Index()
         {
-            throw new System.NotImplementedException();
+            return Enumerable.Empty<Product>();
         }
     }
 }
