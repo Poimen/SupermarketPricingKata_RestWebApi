@@ -1,6 +1,6 @@
 using System;
 
-namespace SupermarketPricingKata_RestWebApi
+namespace SupermarketApi
 {
     public class WeatherForecast
     {
