@@ -7,7 +7,7 @@ using SupermarketApi.Products;
 using SupermarketApi.Products.FindProducts;
 using SupermarketApi.Products.Mapping;
 
-namespace SupermarketApi.Tests
+namespace SupermarketApi.Tests.Products
 {
     [TestFixture]
     public class ProductTests
