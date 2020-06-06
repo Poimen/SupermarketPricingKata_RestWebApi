@@ -8,14 +8,14 @@ namespace SupermarketApi.Products
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProductController : ControllerBase
+    public class ProductsController : ControllerBase
     {
-        public ProductController()
+        public ProductsController()
         {
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Product>> Index()
+        public async Task<IEnumerable<Product>> Get()
         {
             return Enumerable.Empty<Product>();
         }

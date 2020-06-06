@@ -13,14 +13,14 @@ namespace SupermarketApi.Tests
             // Arrange
             var controller = CreateController();
             // Act
-            var result = await controller.Index();
+            var result = await controller.Get();
             // Assert
             Assert.That(result, Is.Empty);
         }
 
-        private static ProductController CreateController()
+        private static ProductsController CreateController()
         {
-            return new ProductController();
+            return new ProductsController();
         }
     }
 }
